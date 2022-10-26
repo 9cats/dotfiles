@@ -8,7 +8,7 @@ param(
 )
 
 # build temp directory for git clone 
-$Origin = $PWD
+$Origin = Join-Path -Path $PWD -ChildPath ""
 $path = Join-Path ([System.IO.Path]::GetTempPath()) ([System.IO.Path]::GetRandomFileName())
 
 while(Test-Path $path) {
